@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My First GitHub Website</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>Welcome to my website hosted on GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silent Listener | Where Your Voice Finds Peace</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f5f1;
+      color: #2b2b2b;
+      margin: 0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #d9e8d4;
+      color: #2b2b2b;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #4a4a4a;
+    }
+    nav {
+      text-align: center;
+      background-color: #eae7dc;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a3a3a;
+      font-weight: 500;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #557a46;
+      font-family: "Playfair Display", serif;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #8fcf97;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #6abf78;
+    }
+    footer {
+      background-color: #d9e8d4;
+      text-align: center;
+      padding: 30px 20px;
+      color: #3a3a3a;
+    }
+    .success-message {
+      display: none;
+      background-color: #e6ffe6;
+      border: 1px solid #6abf78;
+      color: #3a3a3a;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>Silent Listener</h1>
+    <p>Where your voice finds peace</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#book">Book</a>
+    <a href="#payment">Payment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Silent Listener</h2>
+    <p>
+      Silent Listener is a warm, private space created to give you the freedom to express your thoughts, emotions, and experiences without judgment.  
+      We believe that sometimes all a person needs is to be heard — and in that silence, healing begins.  
+    </p>
+  </section>
+
+  <section id="book">
+    <h2>Book a Session</h2>
+    <form id="booking-form" action="https://formspree.io/f/xdkpnadj" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Share what’s on your mind..." required></textarea>
+      <button type="submit">Request Booking</button>
+      <div class="success-message" id="successMessage">Thank you for reaching out. You'll receive a response soon 🌿</div>
+    </form>
+  </section>
+
+  <section id="payment">
+    <h2>Payment</h2>
+    <p style="text-align:center;">
+      You can confirm your session by sending your payment via <strong>M-Pesa</strong> to:<br /><br />
+      <strong>0723361927</strong><br /><br />
+      Once payment is received, you’ll receive a confirmation message.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+      <strong>Email:</strong> tenacitypure@gmail.com<br />
+      <strong>Backup Email:</strong> robaimalaba@gmail.com
+    </p>
+    <p style="text-align:center; margin-top:20px;">
+      Thank you for trusting Silent Listener. You are never alone 🌿
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Silent Listener | Where your voice finds peace</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('booking-form');
+    const successMessage = document.getElementById('successMessage');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        successMessage.style.display = 'block';
+        form.reset();
+      }
+    });
+  </script>
+</body>
 </html>
+
