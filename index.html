@@ -129,9 +129,10 @@
   <section id="payment">
     <h2>Payment</h2>
     <p style="text-align:center;">
-      You can confirm your session by sending your payment via <strong>M-Pesa</strong> to:<br /><br />
-      <strong>0723361927</strong><br /><br />
-      Once payment is received, you’ll receive a confirmation message.
+      To confirm your session, please send your payment via  
+      <strong>M-Pesa – Pochi La Biashara</strong> to:<br /><br />
+      <strong>0715 147 446</strong><br /><br />
+      Once payment is received, your booking will be confirmed automatically.
     </p>
   </section>
 
@@ -164,9 +165,11 @@
       if (response.ok) {
         successMessage.style.display = 'block';
         form.reset();
+        document.querySelector("#payment").scrollIntoView({ behavior: "smooth" });
       }
     });
   </script>
 </body>
 </html>
+
 
