@@ -91,6 +91,34 @@
       border-radius: 8px;
       text-align: center;
     }
+    /* ⭐ PRICING SECTION CSS ⭐ */
+#pricing {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.price-card {
+  background: #ffffff;
+  border: 1px solid #d9e8d4;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.price-card h3 {
+  margin: 0;
+  color: #557a46;
+  font-family: "Playfair Display", serif;
+}
+
+.price {
+  font-size: 1.1em;
+  color: #2b2b2b;
+  margin: 8px 0;
+}
+
   </style>
 </head>
 <body>
@@ -105,6 +133,7 @@
     <a href="#book">Book</a>
     <a href="#payment">Payment</a>
     <a href="#contact">Contact</a>
+    <a href="#price">Price</a>
   </nav>
 
   <section id="about">
@@ -135,6 +164,26 @@
       Once payment is received, your booking will be confirmed automatically.
     </p>
   </section>
+  <section id="pricing">
+  <h2>Session Prices</h2>
+
+  <div class="price-card">
+    <h3>General Sessions</h3>
+    <p class="price">Ksh 50 per 30 minutes</p>
+    <p class="price">Ksh 100 per 1 hour</p>
+  </div>
+
+  <div class="price-card">
+    <h3>Deep Sessions</h3>
+    <p class="price">Ksh 150 per 1 hour</p>
+  </div>
+
+  <div class="price-card">
+    <h3>Anonymous Sessions</h3>
+    <p class="price">Ksh 50 for 30 minutes</p>
+  </div>
+</section>
+
 
   <section id="contact">
     <h2>Contact</h2>
